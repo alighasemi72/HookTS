@@ -1,0 +1,34 @@
+{
+  "name": "hookts",
+  "version": "0.1.0",
+  "description": "Type-safe singleton hook system for Node.js and web environments",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test test",
+    "example:basic": "npm run build && node examples/basic.mjs",
+    "example:mixed": "npm run build && node examples/mixed.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "keywords": [
+    "hooks",
+    "typescript",
+    "singleton",
+    "events"
+  ],
+  "license": "MIT"
+}
