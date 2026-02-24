@@ -4,7 +4,6 @@ A dependency-free, type-safe hook package for Node.js and browser environments.
 
 ## Features
 
-- Singleton registry shared through `globalThis`
 - Fully async handler model (`HookHandler<T> = (payload: T) => Promise<Results<T>>`)
 - Three modes: `sync`, `async`, and `mixed`
 - Module augmentation support for hook name autocomplete and payload typing
